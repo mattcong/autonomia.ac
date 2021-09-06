@@ -11,6 +11,19 @@
     <script type="module" src="main.js"></script>
 </head>
 <body>
+
     <canvas id="scene-container"></canvas>
+
+    <div class="content">
+        <div class="text-circle">
+            <svg width="inherit" height="inherit    " viewBox="0 0 200 200">
+                <path id="circle" fill="transparent" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"/>
+                <text width="600">
+                    <textPath alignment-baseline="top" xlink:href="#circle">
+                        LOREM IPSUM DOLOR SIT AMET
+                    </text>
+            </svg>
+        </div>
+    </div>
 </body>
 </html>
