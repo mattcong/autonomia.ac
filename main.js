@@ -20,8 +20,8 @@ import {
     const camera = new PerspectiveCamera(fov, aspect, near, far);
     camera.position.z = 3;
   
-    const controls = new OrbitControls(camera, canvas);
-    controls.target.set(0, 0, 0);
+    const controls = new OrbitControls(camera, document.querySelector('.parent'));
+    controls.target.set(10, 2, 4);
     controls.update();
   
     {
@@ -66,3 +66,7 @@ import {
   }
   
   main();
+
+
+
+

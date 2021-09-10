@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
 
-html, body {
+body {
     height: 100%;
     margin: 0;
+    box-sizing: border-box;
+    background-color: black;
   }
 
   #scene-container {
@@ -14,10 +16,26 @@ html, body {
     z-index: -100;
   }
 
+.intro {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  opacity: 0;
+}
+
+.intro p {
+  font-family: 'JetBrains Mono', monospace;
+  color:rgb(108, 28, 184);
+  font-size: 2.2vw;
+  padding: 10px;
+}
+
 .content {
     display: flex;
     box-sizing: border-box;
-    height: 100%;
+    height: 100vh;
+    opacity: 1;
   }
 
 .sidebar {
@@ -25,9 +43,11 @@ html, body {
       flex-direction: column;
       border: solid;
       box-sizing: border-box;
-      color: rgb(108, 28, 184);
-      width: 20vw;
+      width: 26vw;
       overflow-y: scroll;
+
+      font-family: 'JetBrains Mono', monospace;
+      color: rgb(108, 28, 184);
     }
 
 .sidebar::-webkit-scrollbar {
@@ -35,26 +55,81 @@ html, body {
     }
 
 .sidebar h1 {
-  font-family: 'JetBrains Mono', monospace;
-  color:rgb(108, 28, 184);
-  font-size: 2.2vw;
-  padding: 10px;
-}
+      font-size: 2.2vw;
+      padding: 10px;
+  }
 
 .menu {
+      border-bottom: solid;
+  }
+
+.menu-item {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  border-bottom: solid;
-  color:rgb(108, 28, 184);
+  border-top: solid; 
+  padding: 10px;
+  cursor: pointer
 }
 
-.sidebar a {
+button {
   font-family: 'JetBrains Mono', monospace;
-  color:rgb(108, 28, 184);
-  padding: 20px;
-  font-size: 1.9vw;
-  text-decoration: none;
+  font-size: 1.8vw;
+  color: rgb(108, 28, 184);
+  border:none;
+  background-color: transparent;
+  align-content: center;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li {
   border-top: solid;
+  width: 100%;
+  padding: 10px;
+  list-style-type: none;
+
+  font-size: 1.7vw;
+}
+
+.publications {
+  border-top:solid;
+  justify-content: center;
+}
+
+.publication-img {
+  width: 80%;
+  margin: 10px;
+  border: solid;
+  color: black;
+}
+
+.menu-arrow {
+  padding-right: 6%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.eye {
+  padding-top: 25px;
+  padding-right: 25px;
+}
+
+.eye img {
+  width: calc(30px + 2.3vw);
+  color: blueviolet;
 }
 
 .text-circle {
@@ -73,4 +148,13 @@ html, body {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 10px;
+    
+    animation: rotate 100s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
   }
+
+  @keyframes rotate {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
