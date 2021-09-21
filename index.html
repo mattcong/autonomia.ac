@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>paranomia.xyz</title>
+    <title>Autonomics Research Centre</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,50 +9,96 @@
     
     <link href="style.css" rel="stylesheet">
     <script type="module" src="main.js"></script>
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 </head>
 <body>
-   
-    <div class="parent">    
-    
+
     <canvas id="scene-container"></canvas>
 
-        <div class=content>
-        <div class="sidebar">
-            <div class="header">
-                <h1>uuuu uuuu</h1>
-            </div>
-               
-            <div class="menu">
-                <button class="menu-item"><div class="menu-arrow">></div>publications</button>
-
-                    <ul class="dropdown" class="publications">
-                        <li><img class="publication-img" src="1626580901849.png" alt=""></li>
+        <div class=content> 
+            <div class="sidebar">
+                <div class="header" >
+                    <h1 onclick="openWindow()">Autonomics<br>
+                        Research<br>
+                        Centre<br></h1>
+                </div>
+                
+                <ul class="menu">
+                    <li class="menu-item-1">&#9046;
+                        publications</li>
+                        <div class="publications">
+                            <img class="publication-img" src="1626580901849.png" alt="">
+                            <ul class="publication-name">
+                                <li><a href="">pangea</a></li>
+                            </ul>                    
+                        </div>
+                
+                    <li class="menu-item-2">&#9046; texts</li>
+                        <ul class="texts">
+                            <li><a href="https://am1am10000.blogspot.com/search/label/conceptual%20death">the conceptual death</a></li>
+                            <li><a href="https://am1am10000.blogspot.com/search/label/antagonisms">antagonisms</a></li>
+                        </ul>
                     </ul>
+                <div class="menu-space"></div>
+                <div class="qr">
+                    <img src="frame.svg" alt="">
+                </div>
+            </div>
+        
+            <div id="about-window">
+                <div class="about-content">
+                    <div class="i"><i class="lni lni-cross-circle" id="close-button" onclick ="closeWindow()"></i></div>
+                        <div class="p"><p>The Autonomics Research Centre [ARC] is a para-academic media collective. <br>
+                                    As a program of study, ARC remains protean. It is a practice of cross-pollination.</p>
+                        </div>
+                </div>
+            </div>
+        
+        <div class="parent">    
+            <div class="text-circle">
+                <svg width="inherit" height="inherit" viewBox="10 10 180 180">
+                    <path id="circle" fill="transparent" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"/>
+                    <text width="600">
+                        <textPath alignment-baseline="top" xlink:href="#circle">
+                            NON MAGIS CONTINGENTIA 
+                    </svg>
+            </div>
             
-                <button class="menu-item"><div class="menu-arrow">></div> texts</button>
-
-                    <ul class="dropdown" class="texts">
-                        <li><a href="https://am1am10000.blogspot.com/search/label/conceptual%20death">the conceptual death</a></li>
-                        <li><a href="https://am1am10000.blogspot.com">am1am10000</a></li>
-                    </ul>
+            <div class="eye">
+                <img src="eye.svg" alt="more">
             </div>
-        </div>
 
-        <div class="text-circle">
-            <svg width="inherit" height="inherit" viewBox="0 10 180 180">
-                <path id="circle" fill="transparent" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"/>
-                <text width="600">
-                    <textPath alignment-baseline="top" xlink:href="#circle">
-                        LOREM IPSUM DOLOR SIT AMET
-                    </text>
-            </svg>
-        </div>
+            <div class="info-page-top"></div>
+            <div class="info-page-bottom"></div>
 
-        <div class="eye">
-            <img src="eye.svg" alt="about ">
         </div>
     </div>
-</div>
+
+    <script>
+
+            function openWindow () {
+            const closedWindow = document.getElementById("about-window");
+            if (closedWindow.style.display === "block") {
+                button.style.display = "none";
+            } else {
+                closedWindow.style.display = "block";
+            }
+            }
+
+            function closeWindow () {
+            const closedWindow = document.getElementById("about-window",);
+            if (closedWindow.style.display === "none") {
+                button.style.display = "block";
+            } else {
+                closedWindow.style.display = "none";
+            }
+            }
+
+            function openPage () {
+            const page = document.getElementsByClassName('info-page-top', 'info-page-bottom')
+
+            }
+    </script>
 
 </body>
 </html>
