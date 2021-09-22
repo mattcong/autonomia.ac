@@ -339,7 +339,7 @@ a:active {
 }
 
 @keyframes slideDown {
-  0% {transform: translateY(-200px);
+  0% {transform: translateY(-250px);
  }
  100% {
    transform: translateY(0px);
@@ -363,22 +363,22 @@ a:active {
     opacity: 1;
   }
   100% {
-    transform: translateY(0vw);
+    transform: translateY(2vh);
     opacity: 1;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .content {
     flex-direction: column;
   }
 
   .sidebar {
-    height: 25vh;
-    min-height: 25vh;
+    border: none;
+    min-height: 36vh;
     width: 100vw;
     flex-direction: row;
-    transform: translateY(-200px);
+    transform: translateY(-250px);
     animation: slideDown ease-in-out 0.9s;
     animation-delay: 1.8s;
     animation-iteration-count: 1;
@@ -387,18 +387,18 @@ a:active {
 
   .header {
     justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0;
-    height: 100%;
+    height: 50%;
     width: 40%;
     padding: 0;
     margin: 0;
     }
 
     h1 {
-    font-size: 3.5vh;
-    height: 100%;
-    padding: 1.5vh 4vw 2vh 3vw;
+    font-size: calc(10px + 2vw);
+    padding: 3vh 4vw;
     }
 
   #about-window {
@@ -450,22 +450,21 @@ a:active {
   }
 
   .menu {
-    height: fit-content;
-    border-bottom: none;
+    height: 35vh;
+    border: solid;
   }
   .menu-item-1 {
     border-top: none;
   } 
-    .publication-img {
-      display: none;
-    }
+  .publication-img {
+    display: none;
+  }
   .publications {
     display: block;
   }
 
   li {
-    border-left: solid;
-    font-size: 3vh;
+    font-size: calc(10px + 1.6vw);
     color: rgb(108, 28, 184);
     align-content: center;
     list-style-type: none;
@@ -474,7 +473,7 @@ a:active {
     }
 
   .texts li {
-    font-size: 3vh;
+    font-size: calc(10px + 1vw);
     }
 
   .publication-name {
@@ -483,7 +482,7 @@ a:active {
 
   .publication-name li {
     padding: 10px;
-    font-size: 3vh;
+    font-size: calc(10px + 1vw);
     }
 
   .qr {
@@ -491,17 +490,22 @@ a:active {
     }
 
   .parent {
-    height: 75vh;
+    height: 57vh;
+    width: 100vw;
     }
 
   .text-circle {
-    padding-top: 4vh;
+    padding: 2vh 2vw;
     animation: none;
     opacity: 0%;
     animation: textCircleShiftDown ease 2.5s;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;;
+  }
+
+  .text-circle text {
+    animation: rotate 100s infinite linear;
   }
 
   .eye img {
