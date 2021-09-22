@@ -77,7 +77,6 @@ canvas {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   }
-    
 
 .sidebar::-webkit-scrollbar {
   display: none;
@@ -108,7 +107,6 @@ h1:hover {
 h1:active {
   color: rgb(108, 28, 184);
 }
-
 
 #about-window {
   position: absolute;
@@ -346,24 +344,20 @@ a:active {
  }
 }
 
-@keyframes textCircleShiftDown {
+@keyframes textCircleFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-10vh);
   }
   16% {
     opacity: 0;
   }
   45% {
-    transform: translateY(-10vh);
     opacity: 1;
   }
   70% {
-    transform: translateY(-10vh);
     opacity: 1;
   }
   100% {
-    transform: translateY(2vh);
     opacity: 1;
   }
 }
@@ -374,8 +368,8 @@ a:active {
   }
 
   .sidebar {
-    border: none;
-    min-height: 36vh;
+    border: solid;
+    min-height: min-content;
     width: 100vw;
     flex-direction: row;
     transform: translateY(-250px);
@@ -390,10 +384,11 @@ a:active {
     align-items: center;
     position: sticky;
     top: 0;
-    height: 50%;
+    height: 100%;
     width: 40%;
     padding: 0;
     margin: 0;
+    border-right: solid 2px rgb(108, 28, 184);
     }
 
     h1 {
@@ -450,9 +445,10 @@ a:active {
   }
 
   .menu {
-    height: 35vh;
-    border: solid;
+    height: min-content;
+    border-bottom: none;
   }
+    
   .menu-item-1 {
     border-top: none;
   } 
@@ -495,17 +491,18 @@ a:active {
     }
 
   .text-circle {
+    transform: translateY(4vh);
     padding: 2vh 2vw;
-    animation: none;
-    opacity: 0%;
-    animation: textCircleShiftDown ease 2.5s;
+    animation: textCircleFadeIn ease 2.5s;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;;
+    animation-fill-mode: forwards;
   }
-
+  
   .text-circle text {
     animation: rotate 100s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box; 
   }
 
   .eye img {
