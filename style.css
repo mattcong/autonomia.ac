@@ -7,7 +7,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: white;
-  }
+}
 
 canvas {
   background-color: white;
@@ -64,7 +64,7 @@ canvas {
   display: flex;
   flex-direction: column;
   position: relative;
-  border: solid 3px;
+  border: solid 2px;
   box-sizing: border-box;
   width: 26vw;
   overflow-y: scroll;
@@ -170,7 +170,7 @@ h1:active {
 
 .menu {
   padding-inline-start: 0;
-  border-bottom: solid;
+  border-bottom: solid 2px;
   box-sizing: border-box;
   margin: 0;
   width: 100%;
@@ -179,7 +179,7 @@ h1:active {
 .menu-item-1, .menu-item-2 {
   width: 100%;
   display: flex;
-  border-top: solid; 
+  border-top: solid 2px; 
   padding: 10px;
   pointer-events: none;
 }
@@ -199,7 +199,7 @@ li {
 }
 
 .texts li {
-  border-top: solid ;
+  border-top: solid 2px;
   width: 100%;
   margin: 0px;
   padding: 10px;
@@ -210,7 +210,7 @@ li {
 
 .publications {
   width: 100%;
-  border-top: solid;
+  border-top: solid 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,8 +218,7 @@ li {
 
 .publication-img {
   width: 70%;
-  border: solid;
-  color: black;
+  border: solid 2px black;
   margin: 2vw;
 }
 
@@ -327,21 +326,12 @@ a:active {
 
 .text-circle text {
   font-family: 'Nova Oval', cursive;
-  fill: rgb(108, 28, 184);
   font-size: 23px;
   font-weight: 400;
   letter-spacing: 6.9px;
   animation: rotate 100s infinite linear;
   transform-origin: center;
   transform-box: fill-box; 
-}
-
-@keyframes slideDown {
-  0% {transform: translateY(-250px);
- }
- 100% {
-   transform: translateY(0px);
- }
 }
 
 @keyframes textCircleFadeIn {
@@ -363,20 +353,26 @@ a:active {
 }
 
 @media (max-width: 600px) {
+  * {
+    overflow: hidden;
+  }
+
   .content {
     flex-direction: column;
   }
 
   .sidebar {
-    border: solid;
-    min-height: min-content;
+    border: solid 2px;
+    min-height: 40vh;
     width: 100vw;
     flex-direction: row;
-    transform: translateY(-250px);
-    animation: slideDown ease-in-out 0.9s;
-    animation-delay: 1.8s;
+    transform: translateX(0px);
+    opacity: 0;
+    animation: fadeIn ease-out 0.5s;
+    animation-delay: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    overflow-y: scroll;
     }
 
   .header {
@@ -414,8 +410,7 @@ a:active {
       flex-direction: column;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255 1) ;
-      backdrop-filter: blur(40px);
+      background-color: white;
     } 
     
   .about-content .p {
@@ -441,22 +436,30 @@ a:active {
     font-size: 3.5vh;
     padding: 1.1vh;
     cursor: pointer;
-    position: relative;
   }
 
   .menu {
-    height: min-content;
-    border-bottom: none;
+    height: 40vh;
+    width: 70%;
+    border-bottom: none;    
+    overflow-y: scroll;
   }
-    
+
+  .menu::-webkit-scrollbar {
+    display: none;
+  }    
+
   .menu-item-1 {
     border-top: none;
   } 
   .publication-img {
-    display: none;
+    display: block;
+    width: 50%;
   }
   .publications {
-    display: block;
+    width: 100%;
+    display: flex;
+    padding: 2vh 1vw 2vw 3vh;  
   }
 
   li {
@@ -474,35 +477,35 @@ a:active {
 
   .publication-name {
     display: block;
+    transform: rotate(90deg);
+    width: 60%;
+    justify-self: flex-start;
     }
-
-  .publication-name li {
-    padding: 10px;
-    font-size: calc(10px + 1vw);
-    }
+  
+    .publication-name li {
+      padding: 18vw 1vh 0 1vh;
+      }
 
   .qr {
     display: none;
     }
 
   .parent {
-    height: 57vh;
-    width: 100vw;
+    height: auto;
+    width: 150vw;
+    position: absolute;
+    transform: translateX(-24.9vw) translateY(40vh);
     }
 
   .text-circle {
-    transform: translateY(4vh);
+    opacity: 1;
     padding: 2vh 2vw;
-    animation: textCircleFadeIn ease 2.5s;
+    animation: rotate 90s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-  }
-  
-  .text-circle text {
-    animation: rotate 100s infinite linear;
-    transform-origin: center;
-    transform-box: fill-box; 
   }
 
   .eye img {
