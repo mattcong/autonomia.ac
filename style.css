@@ -359,6 +359,7 @@ a:active {
 @media (max-width: 600px) {
   html, body {
     overflow: hidden;
+    position: fixed;
   }
 
   .content {
@@ -438,6 +439,7 @@ a:active {
     width: 70%;
     border-bottom: none;    
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .menu::-webkit-scrollbar {
