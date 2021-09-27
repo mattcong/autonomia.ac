@@ -519,6 +519,7 @@ a:active {
   width: 100vw;
   height: 100vh;
   padding: 2vw 3vw 2vw 3vw;
+  z-index: 100;
 }
 
 .loader p {
