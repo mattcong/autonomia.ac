@@ -496,10 +496,9 @@ a:active {
   .text-circle {
     opacity: 1;
     padding: 2vh 2vw;
-    animation: rotate 90s infinite linear;
     transform-origin: center;
     transform-box: fill-box;
-    animation: fadeIn ease-in-out 0.5s;
+    animation: rotate 100s infinite linear, fadeIn ease-in-out 0.5;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
