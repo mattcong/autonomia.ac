@@ -376,7 +376,6 @@ a:active {
     transform: translateX(0px);
     opacity: 0;
     animation: fadeIn ease-out 0.5s;
-    animation-delay: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     }
@@ -500,7 +499,7 @@ a:active {
     animation: rotate 90s infinite linear;
     transform-origin: center;
     transform-box: fill-box;
-    animation-delay: 0.5s;
+    animation: fadeIn ease-in-out 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
