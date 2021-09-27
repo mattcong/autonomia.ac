@@ -213,6 +213,7 @@ li {
 }
 
 .publications {
+  box-sizing: border-box;
   width: 100%;
   border-top: solid 2px;
   display: flex;
@@ -377,7 +378,6 @@ a:active {
     animation-delay: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    overflow-y: scroll;
     }
 
   .header {
@@ -397,7 +397,6 @@ a:active {
     h1 {
     font-size: 4vw;
     padding: 3vh 4vw;
-    height: max-content;
     line-height: 5.5vh;
     }
 
@@ -440,7 +439,6 @@ a:active {
     width: 70%;
     border-bottom: none;    
     overflow-y: scroll;
-    overflow-x: hidden;
   }
 
   .menu::-webkit-scrollbar {
@@ -453,12 +451,11 @@ a:active {
 
   .publication-img {
     display: block;
-    width: 50%;
+    width: 60%;
   }
   .publications {
     width: 100%;
-    display: flex;
-    padding: 2vh 1vw 2vw 3vh;  
+    padding: 2vh 2vw 2vw 3vw;  
   }
 
   li {
@@ -477,12 +474,13 @@ a:active {
   .publication-name {
     display: block;
     transform: rotate(90deg);
-    width: 60%;
+    width: 100%;
+    height: 100%;
     }
   
     .publication-name li {
       font-size: calc(10px + 1vw);
-      padding: 18vw 1vh 2vw 1vh;
+      padding: 4vw 1vh 2vw 1vh;
       }
 
   .qr {
