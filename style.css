@@ -89,14 +89,14 @@ canvas {
 .header {
   display: flex;
   justify-content: center;
-  width: 100%
+  width: 100%;
 }
 
 h1 {
   font-size: 2.3vw;
-  padding: 2vw 2vw 2vw 1vw;
+  padding: 2vw 2vw 2.7vw 0vw;
   margin: 0;
-  line-height: 3vw;
+  line-height: 3.2vw;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -386,6 +386,7 @@ a:active {
     justify-content: start;
     position: sticky;
     top: 0;
+    scroll-behavior: none;
     height: 100%;
     width: 40%;
     padding: 0;
@@ -510,4 +511,34 @@ a:active {
     margin-bottom: 0;
     width: calc(20px + 4vh);
     }
+}
+
+.loader {
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  padding: 2vw 3vw 2vw 3vw;
+}
+
+.loader p {
+  font-family: 'PP Supply Mono', sans-serif;
+  font-size: 1.5vw;
+  color: rgb(108, 28, 184);
+}
+
+@media (max-width: 600px) {
+  .loader p {
+    font-size: calc(10px + 1.6vw);
+  }
+}  
+
+@keyframes loadingCursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  animation: loadingCursor 0.5s step-start infinite;
 }

@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Autonomics Research Centre</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link href="style.css" rel="stylesheet">
     <script type="module" src="main.js"></script>
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 </head>
+
 <body>
+
+    <div class="loader">
+        <div class="loader-script">
+            <p>Initialising</p>
+            <p class="cursor">&#9608;</p>
+        </div>
+    </div>
 
     <canvas id="scene-container"></canvas>
 
-        <div class=content> 
-            <div class="sidebar">
-                <div class="header" >
-                    <h1 onclick="openWindow()">Autonomics<br>
-                        Research<br>
-                        Centre<br></h1>
-                </div>
-                
-                <ul class="menu">
-                    <li class="menu-item-1">&#9046;
-                        publications</li>
-                        <div class="publications">
-                            <a href=""><img class="publication-img" src="1626580901849.png" alt=""></a>
-                            <ul class="publication-name">
-                                <li>paranomia 01</li>
-                            </ul>                    
-                        </div>
-                
-                    <li class="menu-item-2">&#9046; texts</li>
-                        <ul class="texts">
-                            <li><a href="https://am1am10000.blogspot.com/search/label/conceptual%20death">the conceptual death</a></li>
-                            <li><a href="https://am1am10000.blogspot.com/search/label/antagonisms">antagonisms</a></li>
-                        </ul>
+    <div class=content>
+        <div class="sidebar">
+            <div class="header">
+                <h1 onclick="openWindow()">Autonomics<br>
+                    Research<br>
+                    Centre<br></h1>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item-1">&#9046;
+                    publications</li>
+                <div class="publications">
+                    <a href=""><img class="publication-img" src="1626580901849.png" alt=""></a>
+                    <ul class="publication-name">
+                        <li>paranomia 01</li>
                     </ul>
-                <div class="qr">
-                    <img src="frame.svg" alt="">
+                </div>
+
+                <li class="menu-item-2">&#9046; texts</li>
+                <ul class="texts">
+                    <li><a href="https://am1am10000.blogspot.com/search/label/conceptual%20death" target="_blank">the
+                            conceptual death</a></li>
+                    <li><a href="https://am1am10000.blogspot.com/search/label/antagonisms"
+                            target="_blank">antagonisms</a></li>
+                </ul>
+            </ul>
+            <div class="qr">
+                <img src="frame.svg" alt="">
+            </div>
+        </div>
+
+        <div id="about-window">
+            <div class="about-content">
+                <div class="i"><i class="lni lni-cross-circle" id="close-button" onclick="closeWindow()"></i></div>
+                <div class="p">
+                    <p>The Autonomics Research Centre [ARC] is a para-academic media collective. <br>
+                        As a program of study, ARC remains protean. It is a practice of cross-pollination.</p>
                 </div>
             </div>
-        
-            <div id="about-window">
-                <div class="about-content">
-                    <div class="i"><i class="lni lni-cross-circle" id="close-button" onclick ="closeWindow()"></i></div>
-                        <div class="p"><p>The Autonomics Research Centre [ARC] is a para-academic media collective. <br>
-                                    As a program of study, ARC remains protean. It is a practice of cross-pollination.</p>
-                        </div>
-                </div>
-            </div>
-        
-        <div class="parent">    
+        </div>
+
+        <div class="parent">
             <div class="text-circle">
                 <svg width="inherit" height="inherit" viewBox="10 10 180 180">
-                    <path id="circle" fill="transparent" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"/>
+                    <path id="circle" fill="transparent"
+                        d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
+                    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+                        <feTurbulence type="turbulence" baseFrequency="0.09" numOctaves="8" result="turbulence" />
+                        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" xChannelSelector="R"
+                            yChannelSelector="G" />
+                    </filter>
                     <text width="600" fill="none" stroke-width="0.6" stroke="rgb(108, 28, 184)">
+
                         <textPath alignment-baseline="top" xlink:href="#circle">
-                            NON MAGIS CONTINGENTIA 
-                    </svg>
+                            NON MAGIS CONTINGENTIA
+                </svg>
             </div>
-            
+
             <div class="eye">
                 <img src="eye.svg" alt="more">
             </div>
@@ -73,31 +92,40 @@
         </div>
     </div>
 
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js">
+        TweenMax.to("feTurbulence", 1, { attr: { numOctaves: 0, baseFrequency: 0 }, yoyo: true, repeat: 1, repeatDelay: 1 });</script>
 
-            function openWindow () {
+    <script>
+        function openWindow() {
             const closedWindow = document.getElementById("about-window");
             if (closedWindow.style.display === "block") {
                 button.style.display = "none";
             } else {
                 closedWindow.style.display = "block";
             }
-            }
+        }
 
-            function closeWindow () {
+        function closeWindow() {
             const closedWindow = document.getElementById("about-window",);
             if (closedWindow.style.display === "none") {
                 button.style.display = "block";
             } else {
                 closedWindow.style.display = "none";
             }
-            }
+        }
 
-            function openPage () {
+        function openPage() {
             const page = document.getElementsByClassName('info-page-top', 'info-page-bottom')
 
-            }
+        }
+
+        const loader = document.querySelector(".loader")
+
+        window.addEventListener("load", function () {
+            loader.style.display = "none"
+        });
     </script>
 
 </body>
+
 </html>
