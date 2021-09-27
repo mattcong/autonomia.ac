@@ -186,6 +186,7 @@ h1:active {
   border-top: solid 2px; 
   padding: 10px;
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 ul {
@@ -208,7 +209,7 @@ li {
   margin: 0px;
   padding: 10px;
   list-style-type: none;
-
+  box-sizing: border-box;
   font-size: 1.4vw;
 }
 
@@ -386,7 +387,6 @@ a:active {
     justify-content: start;
     position: sticky;
     top: 0;
-    scroll-behavior: none;
     height: 100%;
     width: 40%;
     padding: 0;
@@ -435,7 +435,7 @@ a:active {
   }
 
   .menu {
-    height: 45vh;
+    height: 100%;
     width: 70%;
     border-bottom: none;    
     overflow-y: scroll;
@@ -491,7 +491,7 @@ a:active {
     height: auto;
     width: 150vw;
     position: absolute;
-    transform: translateX(-24.9vw) translateY(40vh);
+    transform: translateX(-24.9vw) translateY(45vh);
     }
 
   .text-circle {
