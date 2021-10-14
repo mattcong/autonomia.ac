@@ -76,8 +76,8 @@ canvas {
   font-family: 'PP Supply Mono', monospace;
   color: rgb(108, 28, 184);
   transform: translateX(-26vw);
-  animation: slideIn ease-in-out 0.9s;
-  animation-delay: 1.8s;
+  animation: slideIn ease-in-out 0.8s;
+  animation-delay: 1.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   }
@@ -293,7 +293,7 @@ a:active {
     opacity: 0;
     transform: translateX(-10vw);
   }
-  16% {
+  25% {
     opacity: 0;
   }
   45% {
@@ -325,8 +325,8 @@ a:active {
   padding-top: 1vw;
   pointer-events: none;
   opacity: 0;
-  animation: textCircleShiftRight ease 2.5s;
-  animation-delay: 0.5s;
+  animation: textCircleShiftRight ease 2.2s;
+  animation-delay: 0.2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
