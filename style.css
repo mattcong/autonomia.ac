@@ -94,9 +94,10 @@ canvas {
 
 h1 {
   font-size: 2.3vw;
+  font-weight: 600;
   padding: 2vw 2vw 2.7vw 0vw;
   margin: 0;
-  line-height: 3.2vw;
+  line-height: 3.4vw;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -225,7 +226,7 @@ li {
 .publication-img {
   width: 70%;
   border: solid 2px black;
-  margin: 2vw;
+  margin: 1.3vw auto;
 }
 
 .publication-img  {
@@ -394,9 +395,10 @@ a:active {
     }
 
     h1 {
-    font-size: 4vw;
+    font-size: calc(10px + 2vw);
+    font-weight: 500;
     padding: 3vh 4vw;
-    line-height: 5.5vh;
+    line-height: calc(18px + 3vw);
     }
 
   #about-window {
@@ -448,14 +450,29 @@ a:active {
     border-top: none;
   }
 
+  .publications {
+    width: 100%;
+    padding: 2vh;  
+  }
+
   .publication-img {
     display: block;
     width: 60%;
+    min-width: 90px;
+    margin: 1vw 3vw;
   }
-  .publications {
+
+  .publication-name {
+    display: block;
+    transform: rotate(90deg);
     width: 100%;
-    padding: 2vh 2vw 2vw 3vw;  
-  }
+    height: 100%;
+    }
+  
+  .publication-name p {
+    font-size: calc(11px + 1vw);
+    padding: 1vh;
+    }
 
   li {
     font-size: calc(10px + 1.6vw);
@@ -469,18 +486,6 @@ a:active {
   .texts li {
     font-size: calc(10px + 1vw);
     }
-
-  .publication-name {
-    display: block;
-    transform: rotate(90deg);
-    width: 100%;
-    height: 100%;
-    }
-  
-    .publication-name li {
-      font-size: calc(10px + 1vw);
-      padding: 4vw 1vh 2vw 1vh;
-      }
 
   .qr {
     display: none;
