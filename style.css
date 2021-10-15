@@ -26,6 +26,24 @@ canvas {
     }
   }
 
+@keyframes iconSlideLeft {
+  0% { 
+    transform: translateX(20px);
+}
+100% { 
+  transform: translateX(0px);
+}
+}
+
+@keyframes iconSlideDown {
+  0% { 
+    transform: translateX(30px);
+}
+100% { 
+  transform: translateX(0px);
+}
+}
+
 #scene-container {
   animation: fadeIn ease-in-out 0.8s;
   animation-iteration-count: 1;
@@ -80,7 +98,7 @@ canvas {
   animation-delay: 1.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  }
+}
 
 .sidebar::-webkit-scrollbar {
   display: none;
@@ -225,7 +243,7 @@ li {
 
 .publication-img {
   width: 70%;
-  border: solid 2px black;
+  border: solid 1.6px black;
   margin: 1.3vw auto;
 }
 
@@ -359,6 +377,32 @@ a:active {
   }
 }
 
+.footer {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 0px;
+  right: 0px;
+  padding: 0 1.2vw 1.1vw 0;
+  opacity: 0;
+  animation: fadeIn 0.15s ease;
+  animation-delay: 2.36s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.footer a {
+  font-family: PP Supply Mono;
+  font-size: calc(7px + 0.7vw);
+  text-decoration: none;
+  text-align: right;
+  line-height: calc(10px + 0.9vw);
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
   html, body {
     overflow: hidden;
@@ -395,7 +439,7 @@ a:active {
     }
 
     h1 {
-    font-size: calc(10px + 2vw);
+    font-size: calc(10px + 1.9vw);
     font-weight: 500;
     padding: 3vh 4vw;
     line-height: calc(18px + 3vw);
