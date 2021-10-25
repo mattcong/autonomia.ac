@@ -27,12 +27,12 @@ import {
     {
       const loader = new CubeTextureLoader();
       const texture = loader.load([
-      'land-x.jpg',
-      'land+x.jpg',
-      'land+y.jpg',
-      'land-y.jpg',
-      'land+z.jpg',
-      'land-z.jpg',
+      'assets/land-x.jpg',
+      'assets/land+x.jpg',
+      'assets/land+y.jpg',
+      'assets/land-y.jpg',
+      'assets/land+z.jpg',
+      'assets/land-z.jpg',
       ]);
       scene.background = texture;
     }
