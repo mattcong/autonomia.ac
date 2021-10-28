@@ -466,7 +466,7 @@ a:active {
     user-select: none;
     font-family: 'PP Supply Mono', sans-serif;
     font-size: calc(10px + 1.3vw);
-    text-align: left;
+    text-align: justify;
     line-height: calc(15px + 2.3vw);
     animation: fadeIn ease-in-out 0.2s;
   }
