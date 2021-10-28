@@ -136,10 +136,10 @@ h1:active {
 
 #about-window {
   position: absolute;
-  width: 50vw;
-  height: 50vh;
-  margin-left: 25vw;
-  margin-right: 25vw;
+  width: 60vw;
+  height: fit-content;
+  margin-left: 20vw;
+  margin-right: 20vw;
   margin-top: 17.5vh;
   margin-bottom: 17.5vh;
   border: solid black 2px;
@@ -154,9 +154,7 @@ h1:active {
 }
 
 .about-content .p {
-  padding-left: 6vw;
-  padding-right: 7vw;
-  padding-bottom: 4.8vw;
+  padding: 0 6vw 6vw 6vw;
 }
 
 .about-content p {
@@ -167,7 +165,7 @@ h1:active {
   font-family: 'PP Supply Mono', sans-serif;
   font-size: calc(10px + 0.7vw);
   text-align: justify;
-  line-height: 2.7vw;
+  line-height: calc(15px + 1.5vw);
   animation: fadeIn ease-in-out 0.3s;
 }
 
@@ -177,7 +175,7 @@ h1:active {
 
 .about-content i {
   height: 10%;  
-  font-size: 2.5vw;
+  font-size: calc(20px + 0.8vw);
   padding: 1.1vw 1.1vw 0.4vw 1.1vw ;
   cursor: pointer;
   margin-left: auto;
@@ -448,35 +446,35 @@ a:active {
 
   #about-window {
     position: absolute;
-    width: 60vw;
-    height: 50vh;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    margin-top: 17.5vh;
-    margin-bottom: 17.5vh;
+    width: 80vw;
+    height: fit-content;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     z-index: 100;
     display: none;
   }
   
   .about-content .p {
     height: 100%;
-    padding: 0 10vw 0 10vw
+    padding: 0 12vw 19vw 12vw
   }
 
   .about-content p {
     pointer-events: none;
     user-select: none;
     font-family: 'PP Supply Mono', sans-serif;
-    font-size: 3vw;
+    font-size: calc(10px + 1.3vw);
     text-align: left;
-    line-height: 4vh;
+    line-height: calc(15px + 2.3vw);
     animation: fadeIn ease-in-out 0.2s;
   }
     
   .about-content i {
     height: 10%;  
-    font-size: 3.5vh;
-    padding: 1.7vh;
+    font-size: calc(20px + 2vw);
+    padding: 2vh;
     cursor: pointer;
   }
 
