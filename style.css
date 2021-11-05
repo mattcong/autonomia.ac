@@ -243,14 +243,14 @@ li {
 
 .publication-img {
   width: 70%;
-  border: solid 1.6px black;
-  margin: 1.3vw auto;
+  /* border: solid 1.6px black; */
+  margin: 1.9vw auto;
 }
 
 .publication-img  {
   opacity: 1;
   display: block;
-  width: 75%;
+  width: 65%;
   height: auto;
   transition: .35s ease;
   backface-visibility: hidden;
