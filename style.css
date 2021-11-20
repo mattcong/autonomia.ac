@@ -89,7 +89,7 @@ canvas {
   position: relative;
   border: solid 2px;
   box-sizing: border-box;
-  width: 26vw;
+  width: 26%;
   overflow-y: scroll;
   overflow-x: hidden;
   font-family: 'PP Supply Mono', monospace;
@@ -403,7 +403,7 @@ a:active {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   html, body {
     overflow: hidden;
     position: fixed;
@@ -415,8 +415,8 @@ a:active {
 
   .sidebar {
     border: solid 2px;
-    height: 45vh;
-    width: 100vw;
+    height: 60%;
+    width: 100%;
     flex-direction: row;
     transform: translateX(0px);
     opacity: 0;
@@ -447,8 +447,9 @@ a:active {
 
   #about-window {
     position: absolute;
-    width: 80vw;
+    width: 80%;
     height: fit-content;
+    overflow: scroll;
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 9.7vh;
@@ -539,7 +540,7 @@ a:active {
     height: auto;
     width: 150vw;
     position: absolute;
-    transform: translateX(-24.9vw) translateY(45vh);
+    transform: translateX(-24.9vw) translateY(60vh);
     }
 
   .text-circle {
