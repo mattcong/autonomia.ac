@@ -544,13 +544,14 @@ a:active {
     }
 
   .text-circle {
-    opacity: 1;
+    display: none;
+    /* opacity: 1;
     padding: 2vh 2vw;
     transform-origin: center;
     transform-box: fill-box;
     animation: rotate 100s infinite linear, fadeIn ease-in-out 0.5;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
   }
 
   .eye img {
