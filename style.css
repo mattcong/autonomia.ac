@@ -544,7 +544,7 @@ a:active {
     }
 
   .text-circle {
-    display: none;
+    visibility: hidden;
     /* opacity: 1;
     padding: 2vh 2vw;
     transform-origin: center;
