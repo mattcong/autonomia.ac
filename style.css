@@ -99,6 +99,7 @@ canvas {
   animation-delay: 1.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  scrollbar-width: none;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -350,10 +351,10 @@ a:active {
 }
 
 .text-circle text {
-  font-family: 'Nova Oval', cursive;
-  font-size: 23px;
+  font-family: 'Nova Oval';
+  font-size: 21px;
   font-weight: 400;
-  letter-spacing: 6.9px;
+  letter-spacing: 7.3px;
   /* animation: rotate 100s infinite linear; */
   transform-origin: center;
   transform-box: fill-box; 
